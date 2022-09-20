@@ -1,0 +1,7 @@
+{
+  "name": "steller-school",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
