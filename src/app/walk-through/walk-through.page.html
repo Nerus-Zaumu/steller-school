@@ -3,22 +3,34 @@
     <ng-template swiperSlide>
       <div class="swiper first">
         <h3>Mark homework as completed</h3>
-        <ion-img src="assets/icon/homework.svg"></ion-img>
+        <div class="swipe-icon">
+          <ion-img src="assets/icon/homework.svg"></ion-img>
+        </div>
         <ion-img src="assets/icon/swiper-next.svg" (click)="slideNext()"></ion-img>
       </div>
     </ng-template>
     <ng-template swiperSlide>
       <div class="swiper second">
         <h3>Rectify your attendance</h3>
-        <ion-img src="assets/icon/student.svg"></ion-img>
-        <ion-img src="assets/icon/swiper-next.svg" (click)="slideNext()"></ion-img>
+        <div class="swipe-icon">
+          <ion-img src="assets/icon/student.svg"></ion-img>
+        </div>
+        <div class="ctrl">
+          <ion-img src="assets/icon/swiper-prev.svg" (click)="slidePrev()"></ion-img>
+          <ion-img src="assets/icon/swiper-next.svg" (click)="slideNext()"></ion-img>
+        </div>
       </div>
     </ng-template>
     <ng-template swiperSlide>
       <div class="swiper third">
         <h3>Student Exam & Report Cards</h3>
-        <ion-img src="assets/icon/graduation.svg"></ion-img>
-        <ion-img src="assets/icon/swiper-complete.svg" [routerLink]="['/user-mode']"></ion-img>
+        <div class="swipe-icon">
+          <ion-img src="assets/icon/graduation.svg"></ion-img>
+        </div>
+        <div class="ctrl">
+          <ion-img src="assets/icon/swiper-prev.svg" (click)="slidePrev()"></ion-img>
+          <ion-img src="assets/icon/swiper-complete.svg" (click)="navigationService.navigateGlobal('user-mode')"></ion-img>
+        </div>
       </div>
     </ng-template>
   </swiper>

@@ -1,3 +1,4 @@
+import { NavigationService } from './../shared/services/navigation/navigation.service';
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import SwiperCore, { SwiperOptions, Virtual } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
@@ -21,7 +22,7 @@ export class WalkThroughPage implements OnInit {
   //   scrollbar: { draggable: true },
   // };
 
-  constructor() { }
+  constructor(public navigationService: NavigationService) { }
 
   ngOnInit() {
   }
@@ -30,5 +31,8 @@ export class WalkThroughPage implements OnInit {
     this.swiper.swiperRef.slideNext();
   }
 
+  slidePrev(){
+    this.swiper.swiperRef.slidePrev();
+  }
 
 }

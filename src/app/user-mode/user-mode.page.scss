@@ -1,0 +1,46 @@
+@import "../shared/styles/mixins.scss";
+
+ion-content{
+  --background: var(--color-secondary);
+  position: absolute;
+  @include display(column, space-around, center)
+}
+
+.brand{
+  height: 40vh;
+  ion-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+ion-buttons{
+  height: 15vh;
+  @include centralize;
+  @include display(column, space-between, center);
+  ion-button{
+    width: 35vw;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    letter-spacing: 0.5rem;
+    height: 5vh;
+    @include border-radius(0.5rem);
+  }
+
+}
+
+@media screen and (orientation: landscape){
+  .brand{
+    height: 30vh;
+  }
+
+  ion-buttons{
+    height: 25vh;
+    @include display(column, space-around, center);
+    ion-button{
+      height: 10vh;
+    }
+  }
+}
+

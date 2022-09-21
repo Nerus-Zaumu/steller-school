@@ -1,9 +1,10 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>user-mode</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="brand">
+    <ion-img src="assets/icon/logo.svg"></ion-img>
+  </div>
+  <ion-buttons>
+    <ion-button (click)="navigationService.navigateGlobal('login')">Login</ion-button>
+    <ion-button (click)="navigationService.navigateGlobal('signup')">Signup</ion-button>
+  </ion-buttons>
 
 </ion-content>

@@ -15,21 +15,33 @@ $swiper-three-color: #FFD4D4;
   width: 100vw;
   height: 100vh;
   @include display(column, space-around, center);
+  h3{
+    font-size: 3.2rem;
+    width: 50vw;
+  }
+  .first{
+    background-color: $swiper-one-color;
+  }
+  .second{
+    background-color: $swiper-two-color;
+  }
+  .third{
+    background-color: $swiper-three-color;
+  }
+  .ctrl{
+    width: 100vw;
+    @include display(row, space-around, center);
+  }
 }
 
-.swiper .first{
-  background-color: $swiper-one-color;
-}
-
-.swiper .second{
-  background-color: $swiper-two-color;
-}
-
-.swiper .third{
-  background-color: $swiper-three-color;
-}
-
-.swiper h3{
-  font-size: 3.2rem;
-  width: 50vw;
+@media screen and (orientation: landscape){
+  .swipe-icon{
+    width: 60vw;
+    height: 30vw;
+    ion-img{
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+    }
+  }
 }

@@ -1,3 +1,4 @@
+import { NavigationService } from './../shared/services/navigation/navigation.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserModePage implements OnInit {
 
-  constructor() { }
+  constructor(public navigationService: NavigationService) { }
 
   ngOnInit() {
   }
