@@ -1,9 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>walk-through</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <swiper #swiper>
+    <ng-template swiperSlide>
+      <div class="swiper first">
+        <h3>Mark homework as completed</h3>
+        <ion-img src="assets/icon/homework.svg"></ion-img>
+        <ion-img src="assets/icon/swiper-next.svg" (click)="slideNext()"></ion-img>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="swiper second">
+        <h3>Rectify your attendance</h3>
+        <ion-img src="assets/icon/student.svg"></ion-img>
+        <ion-img src="assets/icon/swiper-next.svg" (click)="slideNext()"></ion-img>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="swiper third">
+        <h3>Student Exam & Report Cards</h3>
+        <ion-img src="assets/icon/graduation.svg"></ion-img>
+        <ion-img src="assets/icon/swiper-complete.svg" [routerLink]="['/user-mode']"></ion-img>
+      </div>
+    </ng-template>
+  </swiper>
 </ion-content>

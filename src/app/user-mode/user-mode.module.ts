@@ -1,21 +1,20 @@
-import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { WelcomePageRoutingModule } from './welcome-routing.module';
+import { UserModePageRoutingModule } from './user-mode-routing.module';
 
-import { WelcomePage } from './welcome.page';
+import { UserModePage } from './user-mode.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    WelcomePageRoutingModule,
+    UserModePageRoutingModule
   ],
-  declarations: [WelcomePage]
+  declarations: [UserModePage]
 })
-export class WelcomePageModule {}
+export class UserModePageModule {}

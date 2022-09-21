@@ -1,0 +1,35 @@
+/*Swiper Module styles import*/
+// global.scss
+@import '~swiper/scss';
+@import '~@ionic/angular/css/ionic-swiper';
+
+/*Mixins import*/
+@import '../../app/shared/styles/mixins.scss';
+
+/*temp vars*/
+$swiper-one-color: #FAE0B2;
+$swiper-two-color: #D4F5FF;
+$swiper-three-color: #FFD4D4;
+
+.swiper{
+  width: 100vw;
+  height: 100vh;
+  @include display(column, space-around, center);
+}
+
+.swiper .first{
+  background-color: $swiper-one-color;
+}
+
+.swiper .second{
+  background-color: $swiper-two-color;
+}
+
+.swiper .third{
+  background-color: $swiper-three-color;
+}
+
+.swiper h3{
+  font-size: 3.2rem;
+  width: 50vw;
+}

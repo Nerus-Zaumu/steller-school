@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-welcome',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomePage implements OnInit {
 
-  constructor() { }
+ navToWalkThrough = timer(3000);
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.navToWalkThrough.subscribe(() => {
+      this.router.navigate(['/walk-through']);
+    });
   }
 
 }

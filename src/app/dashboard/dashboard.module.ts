@@ -1,21 +1,20 @@
-import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { WelcomePageRoutingModule } from './welcome-routing.module';
+import { DashboardPageRoutingModule } from './dashboard-routing.module';
 
-import { WelcomePage } from './welcome.page';
+import { DashboardPage } from './dashboard.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    WelcomePageRoutingModule,
+    DashboardPageRoutingModule
   ],
-  declarations: [WelcomePage]
+  declarations: [DashboardPage]
 })
-export class WelcomePageModule {}
+export class DashboardPageModule {}

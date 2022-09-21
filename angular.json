@@ -13,6 +13,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/theme",
+                "src/app/shared/styles"
+              ]
+            },
             "outputPath": "www",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -30,7 +36,7 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": ["src/theme/variables.scss", "src/global.scss", {"input": "src/app/shared/styles/mixins.scss"}],
             "scripts": [],
             "aot": false,
             "vendorChunk": true,

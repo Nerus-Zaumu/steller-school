@@ -1,0 +1,11 @@
+@import "../../theme/variables.scss";
+@import "../../app/shared/styles/mixins.scss";
+
+ion-content{
+  --background: var(--color-secondary);
+  position: absolute;
+}
+
+.content{
+  @include centralize;
+}
