@@ -35,10 +35,14 @@ const routes: Routes = [
     path: 'signup',
     loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
   },
-  // {
-  //   path: 'otp',
-  //   loadChildren: () => import('./otp/otp.module').then( m => m.OtpPageModule)
-  // },
+  {
+    path: 'otp',
+    loadChildren: () => import('./otp/otp.module').then( m => m.OtpPageModule)
+  },
+  {
+    path: 'otp/verification',
+    loadChildren: () => import('./otp-message/otp-message.module').then( m => m.OtpMessagePageModule)
+  },
   // {
   //   path: 'menu',
   //   loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
@@ -82,6 +86,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'change-password',
+    loadChildren: () => import('./change-password/change-password.module').then( m => m.ChangePasswordPageModule)
   },
 ];
 

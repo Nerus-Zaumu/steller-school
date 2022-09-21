@@ -1,0 +1,94 @@
+@import "./mixins.scss";
+
+.container{
+  background-color: var(--color-secondary);
+  position: absolute;
+  @include container-lg;
+  @include display(column, space-between, center);
+  div{
+    width: 100%;
+    height: 50%;
+  }
+  div:first-child{
+    background-color: var(--color-secondary);
+    ion-img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    ion-label{
+      font-weight: 400;
+      font-size: 3rem;
+      letter-spacing: 1rem;
+      color: var(--color-light);
+      z-index: 999;
+      position: absolute;
+      top: 42%;
+      left: 32%;
+    }
+  }
+  div:last-child{
+    background-color: var(--color-light);
+    border-radius: 0 2rem 0 0;
+  }
+
+}
+
+ion-item{
+  width: 90%;
+  margin-inline: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  @include border-radius(1rem);
+  border: 1px solid var(--color-pink);
+}
+
+.btns{
+  width: 80%;
+  height: 10vh !important;
+  margin-inline: auto;
+  @include display(column, space-between, center);
+  button{
+    width: 60%;
+    height: 5vh;
+    color: white;
+    background-color: var(--color-primary) !important;
+    border-radius: 3rem !important;
+  }
+  a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--color-primary);
+  }
+}
+
+.forgot-password{
+  font-size: 2rem !important;
+}
+
+@media screen and (orientation: landscape) {
+  .container{
+    div:first-child{
+      ion-img{
+        object-fit: fill;
+      }
+      ion-label{
+        font-size: 2rem;
+        left: 41.5%;
+      }
+    }
+  }
+
+  .btns{
+    button{
+      height: 12vh;
+      width: 30%;
+    }
+  }
+
+  .forgot-password{
+    left: 30% !important;
+  }
+
+}
+

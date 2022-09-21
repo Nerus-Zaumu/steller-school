@@ -6,11 +6,11 @@
     </div>
     <div>
       <ion-item>
-        <ion-label position="floating">Phone Number</ion-label>
-        <ion-input placeholder="676543210"></ion-input>
+        <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:5}"></ng-otp-input>
       </ion-item>
+      <a [routerLink]="['/login']" class="send-again">Send Again?</a>
       <div class="btns">
-        <button [routerLink]="['/otp/verification']">Generate OTP</button>
+        <button [routerLink]="['/change-password']">Verify</button>
         <a [routerLink]="['/login']">Cancel</a>
       </div>
     </div>

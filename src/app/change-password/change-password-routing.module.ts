@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { OtpPage } from './otp.page';
+import { ChangePasswordPage } from './change-password.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: OtpPage
-  },
+    component: ChangePasswordPage
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class OtpPageRoutingModule {}
+export class ChangePasswordPageRoutingModule {}

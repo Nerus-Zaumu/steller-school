@@ -2,12 +2,12 @@ import { FormsService } from './../shared/services/forms/forms.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.page.html',
-  styleUrls: ['../shared/styles/auth.scss'],
+  selector: 'app-change-password',
+  templateUrl: './change-password.page.html',
+  styleUrls: ['./change-password.page.scss', '../shared/styles/auth.scss'],
   providers: [FormsService]
 })
-export class SignupPage implements OnInit {
+export class ChangePasswordPage implements OnInit {
 
   constructor(public formsService: FormsService) { }
 

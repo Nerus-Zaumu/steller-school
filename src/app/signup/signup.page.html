@@ -1,9 +1,33 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div class="container">
+    <div>
+      <ion-img src="assets/icon/welcome.svg"></ion-img>
+      <ion-label>Create Account</ion-label>
+    </div>
+    <div>
+      <form [formGroup]="formsService.signupForm">
+        <ion-item>
+          <ion-label position="floating">First Name</ion-label>
+          <ion-input placeholder="zerebaijan" formControlName="firstName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Last Name</ion-label>
+          <ion-input placeholder="zerebatos" formControlName="lastName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Telephone</ion-label>
+          <ion-input placeholder="67123654789" formControlName="telephone"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input placeholder="********" formControlName="password"></ion-input>
+        </ion-item>
+        <div class="btns">
+          <button>Signup</button>
+          <a [routerLink]="['/login']">Login Instead</a>
+        </div>
+        <ion-item lines="none"></ion-item>
+      </form>
+    </div>
+  </div>
 </ion-content>

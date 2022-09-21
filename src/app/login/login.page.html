@@ -1,9 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div class="container">
+    <div>
+      <ion-img src="assets/icon/welcome.svg"></ion-img>
+      <ion-label>Sign In</ion-label>
+    </div>
+    <div>
+      <form [formGroup]="formsService.loginForm">
+        <ion-item>
+          <ion-label position="floating">Phone Number</ion-label>
+          <ion-input placeholder="676543210" formControlName="telephone"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input placeholder="********" formControlName="password"></ion-input>
+        </ion-item>
+        <div class="btns">
+          <button>Sign In</button>
+          <a [routerLink]="['/signup']">Create account instead?</a>
+          <a [routerLink]="['/otp']">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+  </div>
 </ion-content>
