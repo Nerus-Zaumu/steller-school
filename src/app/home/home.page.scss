@@ -1,27 +1,11 @@
-#container {
-  text-align: center;
+@import "../shared/styles/mixins.scss";
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-toolbar{
+  width: 100%;
+  --background: var(--color-secondary) !important;
+  height: 15vh;
+  border-radius: 0 0 0 2rem;
+  @include display(row, center, center);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}

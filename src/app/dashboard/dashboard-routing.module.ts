@@ -1,3 +1,4 @@
+import { HomePageModule } from './../home/home.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -6,7 +7,18 @@ import { DashboardPage } from './dashboard.page';
 const routes: Routes = [
   {
     path: '',
-    component: DashboardPage
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
+    component: DashboardPage,
+    children: [
+      {
+        path: 'home',
+        loadChildren: () => import('../home/home.module').then( m => m.HomePageModule)
+      },
+    ]
   }
 ];
 

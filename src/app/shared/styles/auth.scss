@@ -10,6 +10,7 @@
     height: 50%;
   }
   div:first-child{
+    position: relative;
     background-color: var(--color-secondary);
     ion-img{
       width: 100%;
@@ -17,14 +18,14 @@
       object-fit: cover;
     }
     ion-label{
+      width: 100%;
+      text-align: center;
       font-weight: 400;
-      font-size: 3rem;
+      font-size: 2.5rem;
       letter-spacing: 1rem;
       color: var(--color-light);
-      z-index: 999;
       position: absolute;
-      top: 42%;
-      left: 32%;
+      top: 85%;
     }
   }
   div:last-child{
@@ -62,19 +63,11 @@ ion-item{
   }
 }
 
-.forgot-password{
-  font-size: 2rem !important;
-}
-
 @media screen and (orientation: landscape) {
   .container{
     div:first-child{
       ion-img{
         object-fit: fill;
-      }
-      ion-label{
-        font-size: 2rem;
-        left: 41.5%;
       }
     }
   }
@@ -84,10 +77,6 @@ ion-item{
       height: 12vh;
       width: 30%;
     }
-  }
-
-  .forgot-password{
-    left: 30% !important;
   }
 
 }

@@ -1,9 +1,63 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>menu</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<ion-menu side="start" contentId="main-content">
+  <div class="container" [ngStyle]="{'background-image': 'url(assets/icon/toolbar_background.svg)'}">
+    <div class="info">
+      <span><ion-img src="assets/images/person_test.png"></ion-img></span>
+      <p>
+        <span>Yogita Shaje</span>
+        <span>Class VII B</span>
+      </p>
+    </div>
+    <div class="avatar">
+      <ion-menu-toggle><ion-img src="assets/icon/cross-svgrepo-com.svg"></ion-img></ion-menu-toggle>
+    </div>
+  </div>
+  <div class="nav-items">
+    <span>
+      <ion-img src="assets/icon/dashboard.svg"></ion-img>
+      <p>Dashboard</p>
+    </span>
+    <span>
+      <ion-img src="assets/icon/homework-icon.svg"></ion-img>
+      <p>Homework</p>
+    </span>
+    <span>
+      <ion-img src="assets/icon/attendance.svg"></ion-img>
+      <p>Attendance</p>
+    </span>
+    <span>
+      <ion-img src="assets/icon/fee-details.svg"></ion-img>
+      <p>Fee Details</p>
+    </span>
+    <span>
+      <ion-img src="assets/icon/examination.svg"></ion-img>
+      <p>Examination</p>
+    </span>
+    <span>
+      <ion-img src="assets/icon/report-card.svg"></ion-img>
+      <p>Report Cards</p>
+    </span>
+    <span>
+      <ion-img src="assets/icon/calendar.svg"></ion-img>
+      <p>Calendar</p>
+    </span>
+    <span>
+      <ion-img src="assets/icon/notice-board.svg"></ion-img>
+      <p>Notice Board</p>
+    </span>
+    <span>
+      <ion-img src="assets/icon/multimedia.svg"></ion-img>
+      <p>Multimedia</p>
+    </span>
+    <span>
+      <ion-img src="assets/icon/academic-year.svg"></ion-img>
+      <p>Academic Year</p>
+    </span>
+    <span>
+      <ion-img src="assets/icon/profile.svg"></ion-img>
+      <p>Profile</p>
+    </span>
+  </div>
+  <div class="logout">
+    <span>Logout</span>
+  </div>
+</ion-menu>

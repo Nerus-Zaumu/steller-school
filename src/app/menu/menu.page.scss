@@ -1,0 +1,30 @@
+@import "../shared/styles/mixins.scss";
+
+ion-menu{
+  --background: var(--color-secondary);
+  .nav-items{
+    transform: translateY(-5vh);
+    width: 90%;
+    margin-inline: auto;
+    & > span{
+      width: 30%;
+      margin-inline: auto;
+      margin-bottom: 3.5rem;
+      p{
+        color: var(--color-light);
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+    @include display(row, space-between, center);
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .nav-items{
+    margin-top: 10vh;
+  }
+}
+
+

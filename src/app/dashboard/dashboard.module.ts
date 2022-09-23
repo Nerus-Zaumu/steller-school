@@ -1,3 +1,5 @@
+import { MenuPageModule } from './../menu/menu.module';
+import { MenuPage } from './../menu/menu.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +15,8 @@ import { DashboardPage } from './dashboard.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    DashboardPageRoutingModule
+    DashboardPageRoutingModule,
+    MenuPageModule
   ],
   declarations: [DashboardPage]
 })
