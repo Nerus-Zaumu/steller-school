@@ -1,5 +1,4 @@
-<div id="main-content">
-  <ion-header>
+  <ion-header id="main-content">
     <ion-toolbar>
       <div class="container" [ngStyle]="{'background-image': 'url(assets/icon/toolbar_background.svg)'}">
         <div class="info">
@@ -16,10 +15,78 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+    <swiper class="swiper" #swiper [config]="config">
+        <ng-template swiperSlide>
+          <ion-card class="slide-lg">
+            <ion-card-content>
+              <div class="brand">
+                <ion-img src="assets/images/notice_img_one.png"></ion-img>
+              </div>
+              <div class="content">
+                <p>School is going on vacation next month</p>
+              </div>
+              <div class="date">
+                March 2, 2023
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ng-template>
+        <ng-template swiperSlide>
+          <ion-card>
+            <ion-card-content>
+              <div class="brand">
+                <ion-img src="assets/images/notice_img_two.png"></ion-img>
+              </div>
+              <div class="content">
+                <p>Exams will start in a forth nigth</p>
+              </div>
+              <div class="date">
+                Feb 12, 2022
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ng-template>
+        <ng-template swiperSlide>
+          <ion-card>
+            <ion-card-content>
+              <div class="brand">
+                <ion-img src="assets/images/notice_img_three.png"></ion-img>
+              </div>
+              <div class="content">
+                <p>Prom has been pushed forth by 11 days</p>
+              </div>
+              <div class="date">
+                Jul 24, 2021
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ng-template>
+        <ng-template swiperSlide>
+          <ion-card>
+            <ion-card-content>
+              <div class="brand">
+                <ion-img src="assets/images/notice_img_one.png"></ion-img>
+              </div>
+              <div class="content">
+                <p>There is going to be a disciplinary council in the coming days</p>
+              </div>
+              <div class="date">
+                Aug 17, 2023
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ng-template>
+    </swiper>
 
-  </ion-content>
+    <ion-content>
+      <div class="homework">
+        <div class="title">
+          <span>Homework</span>
+          <span [routerLink]="['/dashboard/homework']">See All</span>
+        </div>
+        <app-homework-template [homeworkHolder]="homeworkData"></app-homework-template>
+      </div>
+    </ion-content>
 
-</div>
 <app-menu></app-menu>
 

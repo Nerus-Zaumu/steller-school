@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="container" [ngStyle]="{'background-image': 'url(assets/icon/toolbar_background.svg)'}">
+      <ion-buttons>
+        <ion-button [routerLink]="['/dashboard/home']"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-title>{{ pageTitle }}</ion-title>
+      <div class="calendar" *ngIf="pageTitle === 'Calendar'">
+        <div class="field">
+          <input type="number" [value]="yearVal">
+        </div>
+        <div class="icons">
+          <ion-icon name="chevron-up-outline" (click)="incrementYear()"></ion-icon>
+          <ion-icon name="chevron-down-outline" (click)="decrementYear()"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>

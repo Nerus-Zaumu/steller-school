@@ -8,4 +8,55 @@ ion-toolbar{
   @include display(row, center, center);
 }
 
+.swiper{
+  @include display(row, space-between, center);
+  ion-card{
+    width: 40vw;
+    height: 20vh;
+    @include display(column, space-between, flex-start);
+    background-color: var(--color-light-turqoise);
+    p{
+      text-align: start;
+      color: var(--color-medium);
+    }
+  }
+}
 
+.swiper-wrapper{
+  @include display(row, space-between, center);
+}
+
+@media screen and (min-width: 500px) and (orientation: landscape){
+  ion-card{
+    width: 30vw !important;
+    height: 45vh !important;
+    ion-card-content{
+       div{
+        margin-bottom: 4vh;
+      }
+      ion-img{
+        width: 15vh;
+        height: 15vh;
+      }
+    }
+    p{
+      font-size: 1.7rem !important;
+    }
+  }
+}
+.title{
+  width: 90%;
+  margin-inline: auto;
+  span:first-child{
+    font-weight: 300;
+    font-size: 2.3rem;
+    color: var(--color-secondary);
+  }
+  span:last-child{
+    font-size: 1.7rem;
+    color: var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
+
+  }
+  @include display(row, space-between, center);
+}

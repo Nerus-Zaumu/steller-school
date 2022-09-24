@@ -1,0 +1,105 @@
+@import '../../styles/mixins.scss';
+
+ion-toolbar{
+  width: 100%;
+  --background: var(--color-secondary) !important;
+  height: 15vh;
+  border-radius: 0 0 0 2rem;
+  @include display(row, center, center);
+}
+
+.swiper{
+  @include display(row, space-between, center);
+  ion-card{
+    width: 40vw;
+    height: 20vh;
+    @include display(column, space-between, flex-start);
+    background-color: var(--color-light-turqoise);
+    p{
+      text-align: start;
+      color: var(--color-medium);
+    }
+  }
+}
+
+.swiper-wrapper{
+  @include display(row, space-between, center);
+}
+
+@media screen and (min-width: 500px) and (orientation: landscape){
+  ion-card{
+    width: 30vw !important;
+    height: 45vh !important;
+    ion-card-content{
+       div{
+        margin-bottom: 4vh;
+      }
+      ion-img{
+        width: 15vh;
+        height: 15vh;
+      }
+    }
+    p{
+      font-size: 1.7rem !important;
+    }
+  }
+}
+
+.homework{
+  width: 100vw;
+  @include display(column, space-between, center);
+  .homework-content{
+    width: 90%;
+    margin-inline: auto;
+    .single{
+      width: 100%;
+      @include display(row, space-between, center);
+      ion-icon{
+        width: 20%;
+        height: 50%;
+        color: var(--color-secondary);
+      }
+      p{
+        width: 78%;
+        height: 60%;
+        font-size: 1.6rem;
+        @include display(column, space-between, flex-start);
+        span:first-child{
+          color: var(--color-medium);
+        }
+        span:last-child{
+          color: gray;
+        }
+      }
+    }
+  }
+
+}
+
+.date {
+  color: var(--color-secondary);
+  display: block;
+  font-size: 2rem;
+  font-weight: 1000;
+  margin-top: 4vh;
+  @include display(row, flex-start, flex-end);
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  margin-top: 3rem;
+}
+
+.single:nth-child(odd){
+  .content{
+    background-color: var(--color-pink);
+  }
+}
+
+.single:nth-child(even){
+  .content{
+    background-color: var(--color-light-turqoise);
+  }
+}

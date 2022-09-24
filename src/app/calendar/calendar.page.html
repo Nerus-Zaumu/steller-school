@@ -1,9 +1,146 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>calendar</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-toolbar [pageTitle]="'Calendar'" (year)="getYear($event)"></app-toolbar>
 
 <ion-content>
+
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="btn-group">
+        <div
+          class="btn btn-primary"
+          mwlCalendarPreviousView
+          [view]="view"
+          [(viewDate)]="viewDate"
+          (viewDateChange)="closeOpenMonthViewDay()"
+        >
+        </div>
+        <div
+          class="btn btn-outline-secondary"
+          mwlCalendarToday
+          [(viewDate)]="viewDate"
+        >
+        </div>
+        <div
+          class="btn btn-primary"
+          mwlCalendarNextView
+          [view]="view"
+          [(viewDate)]="viewDate"
+          (viewDateChange)="closeOpenMonthViewDay()"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+    </div>
+    <div class="col-md-4">
+      <div class="btn-group">
+        <div
+          class="btn btn-primary"
+          (click)="setView(calendarView.Month)"
+          [class.active]="view === calendarView.Month"
+        >
+        </div>
+        <div
+          class="btn btn-primary"
+          (click)="setView(calendarView.Week)"
+          [class.active]="view === calendarView.Week"
+        >
+        </div>
+        <div
+          class="btn btn-primary"
+          (click)="setView(calendarView.Day)"
+          [class.active]="view === calendarView.Day"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div [ngSwitch]="view">
+    <mwl-calendar-month-view
+      class="month-view"
+      *ngSwitchCase="calendarView.Month"
+      [viewDate]="viewDate"
+      [events]="events"
+      [refresh]="refresh"
+      [activeDayIsOpen]="activeDayIsOpen"
+      (dayClicked)="dayClicked($event.day)"
+      (eventClicked)="handleEvent('Clicked', $event.event)"
+      (eventTimesChanged)="eventTimesChanged($event)"
+    >
+    </mwl-calendar-month-view>
+    <mwl-calendar-week-view
+      class="week-view"
+      *ngSwitchCase="calendarView.Week"
+      [viewDate]="viewDate"
+      [events]="events"
+      [refresh]="refresh"
+      (eventClicked)="handleEvent('Clicked', $event.event)"
+      (eventTimesChanged)="eventTimesChanged($event)"
+    >
+    </mwl-calendar-week-view>
+    <mwl-calendar-day-view
+      *ngSwitchCase="calendarView.Day"
+      [viewDate]="viewDate"
+      [events]="events"
+      [refresh]="refresh"
+      (eventClicked)="handleEvent('Clicked', $event.event)"
+      (eventTimesChanged)="eventTimesChanged($event)"
+    >
+    </mwl-calendar-day-view>
+  </div>
+
+  <div class="events">
+    <div class="event">
+      <div class="date">
+        <span>Mar</span>
+        <span>01</span>
+      </div>
+      <div class="data">
+        <span>National Day</span>
+        <span>Holiday</span>
+      </div>
+    </div>
+    <div class="event">
+      <div class="date">
+        <span>Nov</span>
+        <span>23</span>
+      </div>
+      <div class="data">
+        <span>Bible Studies</span>
+        <span>Weekly Study</span>
+      </div>
+    </div>
+    <div class="event">
+      <div class="date">
+        <span>Aug</span>
+        <span>14</span>
+      </div>
+      <div class="data">
+        <span>Day for the youths</span>
+        <span>Youth day</span>
+      </div>
+    </div>
+    <div class="event">
+      <div class="date">
+        <span>Feb</span>
+        <span>11</span>
+      </div>
+      <div class="data">
+        <span>National Day</span>
+        <span>Ascension Sunday</span>
+      </div>
+    </div>
+    <div class="event">
+      <div class="date">
+        <span>Jun</span>
+        <span>26</span>
+      </div>
+      <div class="data">
+        <span>A christian holiday</span>
+        <span>Happy Hour</span>
+      </div>
+    </div>
+  </div>
 
 </ion-content>

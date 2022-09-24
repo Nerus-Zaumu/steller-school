@@ -1,0 +1,14 @@
+<div class="homework">
+  <div class="homework-content" *ngFor="let payload of homeworkHolder">
+    <ion-label *ngIf="homeworkHolder.length < 6" class="date">{{ payload.date }}</ion-label>
+    <div class="single" *ngFor="let assignment of payload.payload">
+      <div class="content">
+        <ion-icon [name]="assignment.iconName"></ion-icon>
+      <p>
+        <span>{{ assignment.assignmentDescription }}</span>
+        <span>{{ assignment.course }}</span>
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
