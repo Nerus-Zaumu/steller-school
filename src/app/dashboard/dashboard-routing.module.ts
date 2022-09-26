@@ -33,6 +33,10 @@ const routes: Routes = [
         path: 'transactions',
         loadChildren: () => import('../fee-details/fee-details.module').then( m => m.FeeDetailsPageModule)
       },
+      {
+        path: 'multimedia',
+        loadChildren: () => import('../multimedia/multimedia.module').then(m => m.MultimediaPageModule)
+      },
     ]
   },
   {

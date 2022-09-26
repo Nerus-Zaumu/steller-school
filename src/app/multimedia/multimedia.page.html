@@ -1,9 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>multimedia</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-toolbar [pageTitle]="'Multimedia'"></app-toolbar>
+
+
 
 <ion-content>
-
+  <div class="sub-nav">
+    <span (click)="switchDisplayType('all')" [ngClass]="{active: displayType === 'all'}">All</span>
+    <span (click)="switchDisplayType('video')" [ngClass]="{active: displayType === 'video'}">Video</span>
+    <span (click)="switchDisplayType('image')" [ngClass]="{active: displayType === 'image'}">Images</span>
+    <span (click)="switchDisplayType('document')" [ngClass]="{active: displayType === 'document'}">Documents</span>
+    <span (click)="switchDisplayType('link')" [ngClass]="{active: displayType === 'link'}">Links</span>
+  </div>
+  <app-multimedia-template
+  [documentHolder]="generalService.documentHolder"
+  [imageHolder]="generalService.imageHolder"
+  [videoHolder]="generalService.videoHolder"
+  [linkHolder]="generalService.linkHolder"
+  [displayType]="displayType">
+</app-multimedia-template>
 </ion-content>

@@ -57,11 +57,6 @@ ion-toolbar{
       border-radius: 1.5rem;
       margin-top: 3rem;
       @include display(row, space-between, center);
-      ion-icon{
-        width: 20%;
-        height: 50%;
-        color: var(--color-secondary);
-      }
       p{
         width: 78%;
         height: 60%;
@@ -98,4 +93,11 @@ ion-toolbar{
     .single{
       background-color: var(--color-light-turqoise);
     }
+}
+
+ion-icon{
+  width: 5rem;
+  height: 8rem;
+  color: var(--color-secondary);
+  margin-left: 1rem;
 }

@@ -1,3 +1,4 @@
+import { GeneralService } from './../shared/services/general/general.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultimediaPage implements OnInit {
 
-  constructor() { }
+  displayType = 'all';
+
+  constructor(public generalService: GeneralService) { }
 
   ngOnInit() {
+  }
+
+  switchDisplayType(currentLink: string){
+    this.displayType = currentLink;
   }
 
 }

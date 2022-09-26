@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+import { Pdf, Link, Image, Video } from './../../interfaces/multimedia.model';
 import { Fees } from './../../interfaces/fees.model';
 import { Injectable } from '@angular/core';
 import { SwiperOptions } from 'swiper';
@@ -303,6 +305,43 @@ export class GeneralService {
       paidFee: 16600,
       currency: '₹',
     }
+  ];
+
+  documentHolder: Pdf[] = [
+    {thumbnail: 'assets/icon/pdf.svg', title: 'Social Science Syllabus', oneLiner: 'Syllabus for 2020 batch', pages: '12', content: ''},
+    {thumbnail: 'assets/icon/pdf.svg', title: 'Social Science Syllabus', oneLiner: 'Syllabus for 2020 batch', pages: '12', content: ''},
+    {thumbnail: 'assets/icon/pdf.svg', title: 'Social Science Syllabus', oneLiner: 'Syllabus for 2020 batch', pages: '12', content: ''},
+    {thumbnail: 'assets/icon/pdf.svg', title: 'Social Science Syllabus', oneLiner: 'Syllabus for 2020 batch', pages: '12', content: ''},
+    {thumbnail: 'assets/icon/pdf.svg', title: 'Social Science Syllabus', oneLiner: 'Syllabus for 2020 batch', pages: '12', content: ''},
+    {thumbnail: 'assets/icon/pdf.svg', title: 'Social Science Syllabus', oneLiner: 'Syllabus for 2020 batch', pages: '12', content: ''},
+  ];
+
+  linkHolder: Link[] = [
+    {thumbnail: 'assets/images/notice_img_two.png', brief: 'This is an introductory course...', link: 'www.history.comlessons'},
+    {thumbnail: 'assets/images/notice_img_two.png', brief: 'This is an introductory course...', link: 'www.history.comlessons'},
+    {thumbnail: 'assets/images/notice_img_two.png', brief: 'This is an introductory course...', link: 'www.history.comlessons'},
+    {thumbnail: 'assets/images/notice_img_two.png', brief: 'This is an introductory course...', link: 'www.history.comlessons'},
+    {thumbnail: 'assets/images/notice_img_two.png', brief: 'This is an introductory course...', link: 'www.history.comlessons'},
+    {thumbnail: 'assets/images/notice_img_two.png', brief: 'This is an introductory course...', link: 'www.history.comlessons'},
+  ];
+
+  imageHolder: Image[] = [
+    {thumbnail: 'assets/images/notice_img_one.png', description: 'A screenshot of lesson', size: '200kb', image: '', title: 'An image of screenshot'},
+    {thumbnail: 'assets/images/notice_img_one.png', description: 'A screenshot of lesson', size: '200kb', image: '', title: 'An image of screenshot'},
+    {thumbnail: 'assets/images/notice_img_one.png', description: 'A screenshot of lesson', size: '200kb', image: '', title: 'An image of screenshot'},
+    {thumbnail: 'assets/images/notice_img_one.png', description: 'A screenshot of lesson', size: '200kb', image: '', title: 'An image of screenshot'},
+    {thumbnail: 'assets/images/notice_img_one.png', description: 'A screenshot of lesson', size: '200kb', image: '', title: 'An image of screenshot'},
+    {thumbnail: 'assets/images/notice_img_one.png', description: 'A screenshot of lesson', size: '200kb', image: '', title: 'An image of screenshot'},
+  ];
+
+  videoHolder: Video[] = [
+    {thumbnail: 'assets/icon/video-thumbnail.svg', description: 'Chapter Wise, MCQs and Answers', size: 'Live screenshot', video: ''},
+    {thumbnail: 'assets/icon/video-thumbnail.svg', description: 'Chapter Wise, MCQs and Answers', size: 'Live screenshot', video: ''},
+    {thumbnail: 'assets/icon/video-thumbnail.svg', description: 'Chapter Wise, MCQs and Answers', size: 'Live screenshot', video: ''},
+    {thumbnail: 'assets/icon/video-thumbnail.svg', description: 'Chapter Wise, MCQs and Answers', size: 'Live screenshot', video: ''},
+    {thumbnail: 'assets/icon/video-thumbnail.svg', description: 'Chapter Wise, MCQs and Answers', size: 'Live screenshot', video: ''},
+    {thumbnail: 'assets/icon/video-thumbnail.svg', description: 'Chapter Wise, MCQs and Answers', size: 'Live screenshot', video: ''},
+    {thumbnail: 'assets/icon/video-thumbnail.svg', description: 'Chapter Wise, MCQs and Answers', size: 'Live screenshot', video: ''},
   ];
 
   constructor() { }

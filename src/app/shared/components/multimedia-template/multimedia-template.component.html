@@ -1,3 +1,96 @@
-<p>
-  multimedia-template works!
-</p>
+<div class="container">
+  <div class="document-content" *ngIf="displayType === 'document'">
+    <div class="document" *ngFor="let document of documentHolder">
+      <div class="thumbnail">
+        <ion-img [src]="document.thumbnail"></ion-img>
+      </div>
+      <div class="synopsis">
+        <span>{{ document.title }}</span>
+        <span>{{ document.oneLiner }}</span>
+        <span>{{ document.pages }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="video-holder" *ngIf="displayType === 'video'">
+      <div class="video-content" *ngFor="let video of videoHolder">
+        <div class="thumbnail">
+          <ion-img [src]="video.thumbnail"></ion-img>
+        </div>
+        <div class="description">
+          <span>{{ video.description }}</span>
+          <span>{{ video.size }}</span>
+        </div>
+      </div>
+  </div>
+  <div class="image-content" *ngIf="displayType === 'image'">
+      <div class="document" *ngFor="let image of imageHolder">
+        <div class="thumbnail">
+          <ion-img [src]="image.thumbnail"></ion-img>
+        </div>
+        <div class="synopsis">
+          <span>{{ image.title }}</span>
+          <span>{{ image.description }}</span>
+          <span>{{ image.size }}</span>
+        </div>
+      </div>
+  </div>
+  <div class="link-content" *ngIf="displayType === 'link'">
+      <div class="document" *ngFor="let link of linkHolder">
+        <div class="thumbnail">
+          <ion-img [src]="link.thumbnail"></ion-img>
+        </div>
+        <div class="synopsis">
+          <span>{{ link.link }}</span>
+          <span>{{ link.brief }}</span>
+        </div>
+      </div>
+  </div>
+  <div class="all" *ngIf="displayType === 'all'">
+    <div class="document-content">
+      <div class="document" *ngFor="let document of documentHolder">
+        <div class="thumbnail">
+          <ion-img [src]="document.thumbnail"></ion-img>
+        </div>
+        <div class="synopsis">
+          <span>{{ document.title }}</span>
+          <span>{{ document.oneLiner }}</span>
+          <span>{{ document.pages }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="video-holder">
+      <div class="video-content" *ngFor="let video of videoHolder">
+          <div class="thumbnail">
+            <ion-img [src]="video.thumbnail"></ion-img>
+          </div>
+          <div class="description">
+            <span>{{ video.description }}</span>
+            <span>{{ video.size }}</span>
+          </div>
+      </div>
+    </div>
+    <div class="image-content">
+        <div class="document" *ngFor="let image of imageHolder">
+          <div class="thumbnail">
+            <ion-img [src]="image.thumbnail"></ion-img>
+          </div>
+          <div class="synopsis">
+            <span>{{ image.title }}</span>
+            <span>{{ image.description }}</span>
+            <span>{{ image.size }}</span>
+          </div>
+        </div>
+    </div>
+    <div class="link-content">
+        <div class="document" *ngFor="let link of linkHolder">
+          <div class="thumbnail">
+            <ion-img [src]="link.thumbnail"></ion-img>
+          </div>
+          <div class="synopsis">
+            <span>{{ link.link }}</span>
+            <span>{{ link.brief }}</span>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

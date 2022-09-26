@@ -1,0 +1,94 @@
+@import "../../styles/mixins.scss";
+
+.document-content,
+.image-content,
+.link-content{
+  width: 100%;
+  @include display(column, space-between, center);
+  .document{
+    width: 90%;
+    margin-inline: auto;
+    border-radius: 1.4rem;
+    background-color: var(--color-pink);
+    margin-bottom: 2rem;
+    @include display(row, space-between, center);
+    .thumbnail{
+      width: 20%;
+      margin-left: 1rem;
+      ion-img{
+        height: 80%;
+        width: 80%;
+        object-fit: contain;
+      }
+    }
+    .synopsis{
+      width: 80%;
+      height: 100%;
+      @include display(column, space-between, center);
+      span{
+        display: block;
+        width: 100%;
+      }
+      span:first-child{
+        font-size: 1.8rem;
+        color: black;
+      }
+    }
+    .synopsis:nth-child(2),
+    .synopsis:nth-child(3){
+      color: gray;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.video-holder{
+  width: 100%;
+  @include display(column, space-between, center);
+}
+
+.video-content{
+  width: 90%;
+  margin-inline: auto;
+  background-color: var(--color-pink);
+  border-radius: 2rem;
+  margin-bottom: 2vh;
+  .thumbnail{
+    width: 100%;
+    margin-inline: auto;
+    border-radius: 2rem;
+    margin-top: 1.8rem;
+    ion-img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .description{
+    width: 100%;
+    margin-inline: auto;
+    margin-bottom: 1.8rem;
+    @include display(column, space-between, center);
+    span{
+      width: 100%;
+    }
+    span:first-child{
+      font-size: 1.7rem;
+      color: var(--color-medium);
+    }
+    span:last-child{
+      font-size: 1.4rem;
+      color: gray;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .video-content{
+    align-items: flex-start;
+    div{
+      margin-left: 2rem;
+    }
+  }
+}
+
