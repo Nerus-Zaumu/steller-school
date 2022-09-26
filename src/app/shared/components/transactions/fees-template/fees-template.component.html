@@ -1,0 +1,42 @@
+<div class="container">
+  <ion-accordion-group>
+    <ion-accordion *ngFor="let fee of feesContent">
+      <ion-item slot="header">
+        <div class="header">
+          <div class="title">
+            <h3>{{ fee.description }}</h3>
+          </div>
+          <div class="status">
+            <h4>{{ fee.currency }} {{ fee.paidFee }}</h4>
+            <h5><span>{{ fee.status }}</span></h5>
+          </div>
+        </div>
+        <div class="date">
+          <span>{{ fee.date }}</span>
+        </div>
+      </ion-item>
+      <div class="ion-padding complete-content" slot="content">
+        <h5>
+          <span>Total Fee</span>
+          <span>{{ fee.currency }} {{ fee.totalFee }}</span>
+        </h5>
+        <h5>
+          <span>Extra Fee</span>
+          <span>{{ fee.currency }} {{ fee.extraFee }}</span>
+        </h5>
+        <h5>
+          <span>Late Charges</span>
+          <span>{{ fee.currency }} {{ fee.lateCharges }}</span>
+        </h5>
+        <h5>
+          <span>Discount({{ fee.discount }})</span>
+          <span>{{ fee.currency }} {{ fee.discountAmount }}</span>
+        </h5>
+        <h5>
+          <span>Paid Fee</span>
+          <span>{{ fee.currency }} {{ fee.paidFee }}</span>
+        </h5>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</div>

@@ -1,0 +1,15 @@
+<div class="navbar">
+  <div class="navbar__nav-element" (click)="gotoSpecificTransaction('school')" [ngClass]="{'active': feesNavigationController === 'school'}">
+    <span>School Fee</span>
+  </div>
+  <div class="navbar__nav-element"  (click)="gotoSpecificTransaction('exam')" [ngClass]="{'active': feesNavigationController === 'exam'}">
+    <span>Exam Fee</span>
+  </div>
+  <div class="navbar__nav-element"  (click)="gotoSpecificTransaction('activity')" [ngClass]="{'active': feesNavigationController === 'activity'}">
+    <span>Activity Fee</span>
+  </div>
+</div>
+
+<ion-content>
+  <app-fees-template [feesContent]="feesContent"></app-fees-template>
+</ion-content>

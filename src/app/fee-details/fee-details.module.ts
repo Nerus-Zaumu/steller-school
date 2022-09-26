@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { FeeDetailsPageRoutingModule } from './fee-details-routing.module';
 
 import { FeeDetailsPage } from './fee-details.page';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
+    SharedModule,
     CommonModule,
     FormsModule,
     IonicModule,
-    FeeDetailsPageRoutingModule
+    FeeDetailsPageRoutingModule,
   ],
   declarations: [FeeDetailsPage]
 })

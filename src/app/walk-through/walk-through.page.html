@@ -6,7 +6,7 @@
         <div class="swipe-icon">
           <ion-img src="assets/icon/homework.svg"></ion-img>
         </div>
-        <ion-img src="assets/icon/swiper-next.svg" (click)="slideNext()"></ion-img>
+        <ion-img src="assets/icon/swiper-next.svg" (click)="generalService.slideNext(swiper)"></ion-img>
       </div>
     </ng-template>
     <ng-template swiperSlide>
@@ -16,8 +16,8 @@
           <ion-img src="assets/icon/student.svg"></ion-img>
         </div>
         <div class="ctrl">
-          <ion-img src="assets/icon/swiper-prev.svg" (click)="slidePrev()"></ion-img>
-          <ion-img src="assets/icon/swiper-next.svg" (click)="slideNext()"></ion-img>
+          <ion-img src="assets/icon/swiper-prev.svg" (click)="generalService.slidePrev(swiper)"></ion-img>
+          <ion-img src="assets/icon/swiper-next.svg" (click)="generalService.slideNext(swiper)"></ion-img>
         </div>
       </div>
     </ng-template>
@@ -28,7 +28,7 @@
           <ion-img src="assets/icon/graduation.svg"></ion-img>
         </div>
         <div class="ctrl">
-          <ion-img src="assets/icon/swiper-prev.svg" (click)="slidePrev()"></ion-img>
+          <ion-img src="assets/icon/swiper-prev.svg" (click)="generalService.slidePrev(swiper)"></ion-img>
           <ion-img src="assets/icon/swiper-complete.svg" (click)="navigationService.navigateGlobal('user-mode')"></ion-img>
         </div>
       </div>

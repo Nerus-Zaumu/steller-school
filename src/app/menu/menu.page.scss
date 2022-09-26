@@ -3,7 +3,6 @@
 ion-menu{
   --background: var(--color-secondary);
   .nav-items{
-    transform: translateY(-5vh);
     width: 90%;
     margin-inline: auto;
     & > span{
@@ -24,6 +23,17 @@ ion-menu{
 @media screen and (orientation: landscape) {
   .nav-items{
     margin-top: 10vh;
+  }
+}
+
+.logout{
+  margin-inline: auto;
+  width: 25vw;
+  text-align: center;
+  margin-bottom: 20vh;
+  span{
+    font-size: 2rem;
+    color: var(--color-primary);
   }
 }
 

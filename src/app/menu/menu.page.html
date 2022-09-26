@@ -24,7 +24,7 @@
       <ion-img src="assets/icon/attendance.svg"></ion-img>
       <p>Attendance</p>
     </span>
-    <span [routerLink]="['../fee-details']">
+    <span [routerLink]="['../transactions']">
       <ion-img src="assets/icon/fee-details.svg"></ion-img>
       <p>Fee Details</p>
     </span>
@@ -57,7 +57,8 @@
       <p>Profile</p>
     </span>
   </div>
-  <div class="logout">
+  <div class="logout" [routerLink]="['/login']">
     <span>Logout</span>
   </div>
 </ion-menu>
+ 

@@ -53,6 +53,9 @@ ion-toolbar{
     margin-inline: auto;
     .single{
       width: 100%;
+      height: 100%;
+      border-radius: 1.5rem;
+      margin-top: 3rem;
       @include display(row, space-between, center);
       ion-icon{
         width: 20%;
@@ -85,21 +88,14 @@ ion-toolbar{
   @include display(row, flex-start, flex-end);
 }
 
-.content{
-  width: 100%;
-  height: 100%;
-  border-radius: 1.5rem;
-  margin-top: 3rem;
+.homework-content:nth-child(odd){
+    .single{
+      background-color: var(--color-pink);
+    }
 }
 
-.single:nth-child(odd){
-  .content{
-    background-color: var(--color-pink);
-  }
-}
-
-.single:nth-child(even){
-  .content{
-    background-color: var(--color-light-turqoise);
-  }
+.homework-content:nth-child(even){
+    .single{
+      background-color: var(--color-light-turqoise);
+    }
 }

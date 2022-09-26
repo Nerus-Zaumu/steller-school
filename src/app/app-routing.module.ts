@@ -1,11 +1,8 @@
+import { FeeDetailsPage } from './fee-details/fee-details.page';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  // {
-  //   path: 'home',
-  //   loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  // },
   {
     path: '',
     redirectTo: 'welcome',
@@ -43,18 +40,7 @@ const routes: Routes = [
     path: 'otp/verification',
     loadChildren: () => import('./otp-message/otp-message.module').then( m => m.OtpMessagePageModule)
   },
-  // {
-  //   path: 'menu',
-  //   loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
-  // },
-  // {
-  //   path: 'homework',
-  //   loadChildren: () => import('./homework/homework.module').then( m => m.HomeworkPageModule)
-  // },
-  // {
-  //   path: 'calendar',
-  //   loadChildren: () => import('./calendar/calendar.module').then( m => m.CalendarPageModule)
-  // },
+
   // {
   //   path: 'multimedia',
   //   loadChildren: () => import('./multimedia/multimedia.module').then( m => m.MultimediaPageModule)
@@ -91,6 +77,7 @@ const routes: Routes = [
     path: 'change-password',
     loadChildren: () => import('./change-password/change-password.module').then( m => m.ChangePasswordPageModule)
   },
+
 ];
 
 @NgModule({

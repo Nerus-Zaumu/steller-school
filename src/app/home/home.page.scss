@@ -6,13 +6,13 @@ ion-toolbar{
   height: 15vh;
   border-radius: 0 0 0 2rem;
   @include display(row, center, center);
-}
+} 
 
 .swiper{
   @include display(row, space-between, center);
   ion-card{
     width: 40vw;
-    height: 20vh;
+    height: 22vh;
     @include display(column, space-between, flex-start);
     background-color: var(--color-light-turqoise);
     p{
@@ -29,7 +29,7 @@ ion-toolbar{
 @media screen and (min-width: 500px) and (orientation: landscape){
   ion-card{
     width: 30vw !important;
-    height: 45vh !important;
+    height: 47vh !important;
     ion-card-content{
        div{
         margin-bottom: 4vh;

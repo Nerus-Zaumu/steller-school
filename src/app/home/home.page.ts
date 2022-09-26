@@ -1,3 +1,4 @@
+import { GeneralService } from './../shared/services/general/general.service';
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import SwiperCore, { SwiperOptions, Virtual } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
@@ -13,7 +14,7 @@ SwiperCore.use([Virtual]);
 })
 export class HomePage {
 
-  @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
+  config: SwiperOptions;
 
   homeworkData: HomeworkData[] = [
     {
@@ -49,32 +50,10 @@ export class HomePage {
   ];
 
 
-  config: SwiperOptions = {
-    slidesPerView: 2,
-    spaceBetween: 50,
-    navigation: true,
-    pagination: { clickable: true },
-    scrollbar: { draggable: true },
-    breakpoints: {
-      320: {
-        slidesPerView: 2
-      },
-      500: {
-        slidesPerView: 3,
-      }
-    }
-  };
 
-  constructor() {}
-
-
-  slideNext(){
-    this.swiper.swiperRef.slideNext(100);
+  constructor(private generalService: GeneralService) {
+    this.config = this.generalService.getSwiperConfig(2, 2, 3);
   }
-  slidePrev(){
-    this.swiper.swiperRef.slidePrev(100);
-  }
-
 
 
 }

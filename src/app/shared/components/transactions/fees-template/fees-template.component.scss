@@ -1,0 +1,63 @@
+@import "../../../styles/mixins.scss";
+
+
+.container{
+  @include display(row, center, center);
+}
+ion-accordion{
+  border-radius: 2rem;
+  margin-inline: auto;
+  margin-top: 3vh;
+}
+
+ion-item{
+  --background: var(--color-light-turqoise) !important;
+  background-color: var(--color-light-turqoise);
+  width: 100%;
+  h3,
+  h5{
+    display: inline;
+    font-size: 1.7rem;
+  }
+  @include display(row, space-between, center);
+  .header{
+    div{
+      width: 100%;
+    }
+    .status{
+
+      @include display(row, space-between, center);
+    }
+    @include display(column, space-between, center);
+    span{
+      color: var(--color-light);
+    }
+  }
+  .date{
+    display: block;
+    height: 90%;
+    margin-left: 1.5rem;
+  }
+
+  h3{
+    color: gray;
+  }
+  h5{
+    background-color: var(--color-success);
+    width: 10rem;
+    height: 3rem;
+    border-radius: 3rem;
+    @include display(row, center, center);
+  }
+}
+
+.complete-content{
+  background-color: var(--color-light-turqoise) !important;
+  border-top: 2px solid var(--color-success);
+  h5{
+    @include display(row, space-between, center);
+  }
+  h5:last-child{
+    font-weight: bold;
+  }
+}
