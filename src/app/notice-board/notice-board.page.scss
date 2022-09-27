@@ -1,0 +1,47 @@
+@import '../shared/styles/mixins.scss';
+
+.container{
+  width: 100%;
+  @include display(row, space-between, center);
+  flex-wrap: wrap;
+  ion-card{
+    width: 40vw;
+    height: 22vh;
+    @include display(column, space-between, flex-start);
+    p{
+      text-align: start;
+      color: var(--color-medium);
+    }
+  }
+}
+
+ion-card:nth-child(odd){
+  background-color: var(--color-light-turqoise);
+}
+
+ion-card:nth-child(even){
+  background-color: var(--color-pink);
+}
+
+.brand{
+  width: 35%;
+}
+
+@media screen and (min-width: 500px) and (orientation: landscape){
+  ion-card{
+    width: 30vw !important;
+    height: 47vh !important;
+    ion-card-content{
+       div{
+        margin-bottom: 4vh;
+      }
+      ion-img{
+        width: 15vh;
+        height: 15vh;
+      }
+    }
+    p{
+      font-size: 1.7rem !important;
+    }
+  }
+}

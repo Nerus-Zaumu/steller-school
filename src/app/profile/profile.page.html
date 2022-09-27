@@ -1,10 +1,61 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-back-button defaultHref="/dashboard/home"></ion-back-button>
-    <ion-title>Profile</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-toolbar [pageTitle]="'Profile'"></app-toolbar>
 
 <ion-content>
+  <div class="container">
+    <div class="top" [style.background-image]="'url(assets/icon/toolbar_background.svg)'" >
+      <ion-img src="assets/images/person-profile.png"></ion-img>
+      <p>
+        <span>Yogita Shaje</span>
+        <span>Class VII B</span>
+      </p>
+    </div>
+    <div class="bottom">
+      <ion-item lines="none">
+        <p>
+          <span>Roll Number</span>
+          <span>0175</span>
+        </p>
+      </ion-item>
+      <ion-item lines="none">
+        <p>
+          <span>Date Of Birth</span>
+          <span>10 Oct 1996</span>
+        </p>
+      </ion-item>
+      <ion-item lines="none">
+        <p>
+          <span>Blood Group</span>
+          <span>B+</span>
+        </p>
+      </ion-item>
+      <ion-item lines="none">
+        <p>
+          <span>Emergency Contact</span>
+          <span>+91 456 321 456</span>
+        </p>
+      </ion-item>
+      <ion-item lines="none">
+        <p>
+          <span>Position In Class</span>
+          <span>12th</span>
+        </p>
+      </ion-item>
+      <ion-item lines="none">
+        <p>
+          <span>Father's Name</span>
+          <span>Mr Raj Shaje</span>
+        </p>
+      </ion-item>
+      <ion-item lines="none">
+        <p>
+          <span>Mother's Name</span>
+          <span>Mrs Priya Shaje</span>
+        </p>
+      </ion-item>
+    </div>
+    <div class="update">
+      <button>Ask For Update</button>
+    </div>
+  </div>
 
 </ion-content>

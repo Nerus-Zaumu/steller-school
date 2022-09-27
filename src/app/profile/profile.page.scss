@@ -1,0 +1,54 @@
+@import '../shared/styles/mixins.scss';
+
+.container{
+  width: 100%;
+  @include display(column, center, center);
+  .top,
+  .bottom{
+    width: 100%;
+  }
+  .top{
+    height: 40vh;
+    background-color: var(--color-secondary);
+    border-radius: 0 0 0 2rem;
+    @include display(column, center, center);
+    p{
+      @include display(column, center, center);
+      color: var(--color-light);
+      span:first-child{
+        font-size: 2.5rem;
+      }
+      span:last-child{
+        font-size: 1.6rem;
+        margin-top: 1rem;
+        font-weight: lighter;
+      }
+    }
+  }
+  .bottom{
+    ion-item{
+      p{
+        width: 90%;
+        margin-inline: auto;
+        @include display(row, space-between, center);
+        span:first-child{
+          color: var(--color-medium);
+        }
+        span:last-child{
+          color: var(--color-secondary);
+        }
+      }
+    }
+  }
+  .update{
+    button{
+      width: 70vw;
+      height: 7vh;
+      color: var(--color-light);
+      border-radius: 3rem;
+      background-color: var(--color-primary);
+      font-size: 2rem;
+    }
+    margin-bottom: 2vh;
+  }
+}

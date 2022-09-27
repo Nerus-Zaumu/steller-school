@@ -37,6 +37,14 @@ const routes: Routes = [
         path: 'multimedia',
         loadChildren: () => import('../multimedia/multimedia.module').then(m => m.MultimediaPageModule)
       },
+      {
+        path: 'notice-board',
+        loadChildren: () => import('../notice-board/notice-board.module').then(m => m.NoticeBoardPageModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
+      }
     ]
   },
   {
