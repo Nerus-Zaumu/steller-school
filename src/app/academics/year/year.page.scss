@@ -1,0 +1,23 @@
+@import '../../shared/styles/mixins.scss';
+
+
+ion-label{
+  margin-left: 1.5rem;
+}
+
+ion-buttons{
+  @include display(row, center, center);
+  height: 10vh;
+  width: 100vw;
+  position: absolute;
+  top: 65vh;
+  button{
+    width: 70%;
+    text-align: center;
+    height: 50%;
+    border-radius: 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    font-size: 2rem;
+  }
+}

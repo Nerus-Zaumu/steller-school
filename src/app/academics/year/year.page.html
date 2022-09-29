@@ -1,9 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>year</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-toolbar [pageTitle]="'Select Academic Year'"></app-toolbar>
 
 <ion-content>
+
+  <ion-radio-group>
+    <ion-item>
+      <ion-radio value="2018-19"></ion-radio>
+      <ion-label>2018-19</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="2019-20"></ion-radio>
+      <ion-label>2019-20</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="2020-21"></ion-radio>
+      <ion-label>2020-21</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="2021-22"></ion-radio>
+      <ion-label>2021-22</ion-label>
+    </ion-item>
+  </ion-radio-group>
+
+  <ion-buttons>
+    <button>Update</button>
+  </ion-buttons>
 
 </ion-content>
