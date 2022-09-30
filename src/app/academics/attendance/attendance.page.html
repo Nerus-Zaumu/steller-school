@@ -1,5 +1,33 @@
-<app-toolbar [pageTitle]="'Attendance'" (year)="getYear($event)"></app-toolbar>
+<app-toolbar [pageTitle]="'Attendance'"></app-toolbar>
 
 <ion-content>
+
+  <div class="container">
+    <div class="month-data" *ngFor="let data of dataHolder">
+      <div class="year">
+        <p>Year {{ data.year}}</p>
+      </div>
+     <div class="data-holder">
+      <div class="data" *ngFor="let data of data.months">
+        <div>
+          <span>{{ data.month }}</span>
+        </div>
+        <div>
+          <span>{{ data.presentCount }}</span>
+          <span>Present</span>
+        </div>
+        <div>
+          <span>{{ data.absentCount }}</span>
+          <span>Absent</span>
+        </div>
+        <div>
+          <span>{{ data.leaveCount }}</span>
+          <span>Leave</span>
+        </div>
+      </div>
+     </div>
+    </div>
+
+  </div>
 
 </ion-content>

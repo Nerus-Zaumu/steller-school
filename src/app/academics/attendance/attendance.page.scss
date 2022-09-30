@@ -1,0 +1,52 @@
+@import '../../shared/styles/mixins.scss';
+
+.container{
+  width: 100vw;
+  @include display(column, space-between, center);
+  .data-holder{
+    width: 100%;
+    @include display(column, space-between, center)
+  }
+  .month-data{
+    width: 90%;
+    margin-inline: auto;
+    @include display(column, space-between, center);
+    div{
+      width: 100%;
+    }
+    .year{
+      p{
+        font-size: 1.5rem;
+        color: var(--color-secondary);
+      }
+    }
+    .data{
+      margin-bottom: 2vh;
+      @include display(row, space-between, center);
+      div:first-child{
+        clip-path: circle();
+        background-color: var(--color-primary);
+        color: var(--color-light);
+      }
+      div{
+        width: 20vw;
+        height: 8vh;
+        font-size: 1.5rem;
+        border-radius: 1.2rem;
+        @include display(column, center, center);
+      }
+      div:nth-child(2){
+        background-color: var(--color-light-turqoise);
+        color: var(--color-success);
+      }
+      div:nth-child(3){
+        background-color: var(--color-pink);
+        color: var(--color-primary);
+      }
+      div:nth-child(4){
+        background-color: var( --color-pale-green);
+        color: var(--color-secondary);
+      }
+    }
+  }
+}
