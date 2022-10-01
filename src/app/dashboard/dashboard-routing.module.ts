@@ -48,7 +48,11 @@ const routes: Routes = [
       {
         path: 'academics',
         loadChildren: () => import('../academics/academics.module').then(m => m.AcademicsPageModule)
-      }
+      },
+      // {
+      //   path: 'report-card',
+      //   loadChildren: () => import('../academics/re')
+      // }
     ]
   },
   {

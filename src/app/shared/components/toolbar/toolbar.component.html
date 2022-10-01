@@ -2,7 +2,7 @@
   <ion-toolbar>
     <div class="container" [ngStyle]="{'background-image': 'url(assets/icon/toolbar_background.svg)'}">
       <ion-buttons>
-        <ion-button [routerLink]="['/dashboard/home']"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+        <ion-button (click)="goBack()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
       </ion-buttons>
       <ion-title>{{ pageTitle }}</ion-title>
       <div class="calendar" *ngIf="pageTitle === 'Calendar'">

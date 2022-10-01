@@ -2,13 +2,13 @@
 
 <ion-content>
 
-  <div class="container">
+  <div class="container" *ngIf="!monthDetailState">
     <div class="month-data" *ngFor="let data of dataHolder">
       <div class="year">
         <p>Year {{ data.year}}</p>
       </div>
      <div class="data-holder">
-      <div class="data" *ngFor="let data of data.months">
+      <div class="data" *ngFor="let data of data.months" (click)="monthDetailState = !monthDetailState">
         <div>
           <span>{{ data.month }}</span>
         </div>
@@ -28,6 +28,12 @@
      </div>
     </div>
 
+  </div>
+
+  <div class="month-details" *ngIf="monthDetailState">
+    <h1>Sorry, we do not have attendance details at the moment.</h1>
+    <h1>Feature coming soon</h1>
+    <ion-button (click)="monthDetailState = !monthDetailState">Back</ion-button>
   </div>
 
 </ion-content>

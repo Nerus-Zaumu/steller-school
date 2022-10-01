@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { AcademicsService } from './../../shared/services/academics/academics.service';
+import { Router } from '@angular/router';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-report-cards',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportCardsPage implements OnInit {
 
-  constructor() { }
+
+  constructor(private router: Router, private academicsService: AcademicsService) { }
 
   ngOnInit() {
+  }
+
+  viewReportCard(classTitle: string){
+    this.academicsService.reportCardClass = classTitle;
+    this.router.navigate(['/dashboard/academics/report-card/report-card-details']);
   }
 
 }

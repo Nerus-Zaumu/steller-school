@@ -1,0 +1,19 @@
+@import '../../shared/styles/mixins.scss';
+
+ion-item{
+  width: 95vw;
+  margin-inline: auto;
+  div{
+    width: 100%;
+    height: 100%;
+    @include display(row, space-between, center);
+  }
+}
+
+ion-item:first-child{
+  margin-top: 2vh;
+}
+
+ion-icon{
+  color: var(--color-secondary);
+}

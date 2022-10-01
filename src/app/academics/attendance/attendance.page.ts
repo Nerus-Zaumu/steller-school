@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttendancePage implements OnInit {
 
+  monthDetailState = false;
+
   dataHolder: AttendanceData[] = [
     {
       year: 2020,

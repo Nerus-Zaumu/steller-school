@@ -1,3 +1,4 @@
+import { AcademicsService } from './../../../shared/services/academics/academics.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportCardDetailsPage implements OnInit {
 
-  constructor() { }
+  reportCardClass: string;
+
+  constructor(public academicService: AcademicsService) { }
 
   ngOnInit() {
+  }
+
+  getReportCardClass(event: string){
+    this.reportCardClass = event;
   }
 
 }

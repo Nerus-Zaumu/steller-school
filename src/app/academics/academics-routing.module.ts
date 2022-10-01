@@ -17,7 +17,7 @@ const routes: Routes = [
     loadChildren: () => import('./attendance/attendance.module').then( m => m.AttendancePageModule)
   },
   {
-    path: 'report-cards',
+    path: 'report-card',
     loadChildren: () => import('./report-cards/report-cards.module').then( m => m.ReportCardsPageModule)
   }
 ];

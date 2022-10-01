@@ -1,3 +1,4 @@
+import { SharedModule } from './../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +14,8 @@ import { ReportCardsPage } from './report-cards.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ReportCardsPageRoutingModule
+    ReportCardsPageRoutingModule,
+    SharedModule
   ],
   declarations: [ReportCardsPage]
 })

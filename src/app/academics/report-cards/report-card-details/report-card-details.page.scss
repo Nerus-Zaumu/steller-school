@@ -1,0 +1,148 @@
+@import "../../../shared/styles/mixins.scss";
+
+.report-card{
+  width: 100%;
+  @include display(column, space-between, center);
+  div{
+    width: 90%;
+    margin-inline: auto;
+  }
+  .letter-head{
+    @include display(row, space-around, center);
+    ion-img{
+      width: 25vw;
+      height: 25vh;
+      object-fit: contain;
+    }
+  }
+  .content{
+    span{
+      display: inline-block;
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .profile-head{
+    @include display(row, center, center);
+    border-top: 2px solid var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+  }
+
+  .profile-detail{
+    margin-top: 2vh;
+    @include display(row, center, center);
+    ion-img{
+      width: 15vw;
+      height: 15vh;
+    }
+    div:last-child{
+      @include display(column, space-between, flex-start);
+      span:first-child{
+        font-size: 2rem;
+      }
+      span:last-child{
+        color: gray;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .performance{
+    width: 100% !important;
+    ion-item{
+      div{
+        @include display(row, space-between, flex-start);
+        span:last-child{
+          color: var(--color-secondary);
+        }
+      }
+    }
+  }
+
+  .terms{
+    width: 100%;
+    @include display(column, space-between, center);
+    .term{
+      width: 100%;
+      @include display(column, space-between, center);
+      div:last-child{
+        height: 10vh;
+        background-color: var(--color-pale-green);
+        border-radius: 2rem;
+        @include display(column, center, center);
+        span{
+          color: var(--color-success);
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .term:last-child{
+      margin-bottom: 2vh;
+    }
+  }
+
+  .result-detail{
+    @include display(column, space-between, center);
+    div{
+      width: 100%;
+    }
+    .table{
+      width: 100%;
+      @include display(column, space-between, center);
+      border-radius: 2rem;
+      .row{
+        width: 100%;
+        @include display(row, space-between, center);
+        height: 4vh;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+      }
+      .row:nth-child(even){
+        background-color: #E8EAEC;
+      }
+      .thead{
+        height: 6vh;
+        background-color: #E8EAEC;
+      }
+      .thead,
+      .mark{
+        color: var(--color-medium);
+      }
+      .subject{
+        color: var(--color-secondary);
+      }
+      .final-mark{
+        font-weight: bold;
+      }
+      .result{
+        span{
+          color: var(--color-primary);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .remarks{
+    width: 100%;
+    margin-top: 3vh;
+    @include display(column, space-between, center);
+    .head{
+      font-size: 2rem;
+    }
+    .content{
+      background-color: var(--color-pink);
+      border-radius: 2rem;
+      color: var(--color-primary);
+      font-size: 1.5rem;
+    }
+    .class-councillor{
+      color: var(--color-primary);
+      font-size: 1.5rem;
+      margin-bottom: 2vh;
+    }
+  }
+
+}

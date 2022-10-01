@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-toolbar',
@@ -12,7 +13,7 @@ export class ToolbarComponent implements OnInit {
 
   @Output() year: EventEmitter<number> = new EventEmitter();
 
-  constructor() { }
+  constructor(private location: Location) { }
 
   ngOnInit() {}
 
@@ -28,6 +29,10 @@ export class ToolbarComponent implements OnInit {
 
   yearChanged(){
     this.year.emit(this.yearVal);
+  }
+
+  goBack(){
+    this.location.back();
   }
 
 

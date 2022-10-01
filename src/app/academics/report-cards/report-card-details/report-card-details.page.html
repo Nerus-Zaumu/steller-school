@@ -1,9 +1,279 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>report-card-details</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-toolbar [pageTitle]="academicService.reportCardClass"></app-toolbar>
 
 <ion-content>
+
+  <div class="report-card">
+    <div class="letter-head">
+      <div class="brand">
+        <ion-img src="assets/icon/school-logo.svg"></ion-img>
+      </div>
+      <div class="content">
+        <span>Sanskriti School</span>
+        <span>Dr. S Rhadakrishnan Marg</span>
+        <span>Chanakyapuri, New Delhi</span>
+        <span>Delhi - 11002</span>
+      </div>
+    </div>
+    <div class="profile-head">
+      <h2>PERFORMANCE PROFILE</h2>
+    </div>
+    <div class="profile-detail">
+      <div>
+        <ion-img src="assets/images/person-profile.png"></ion-img>
+      </div>
+      <div>
+        <span>Yogita Shaje</span>
+        <span>Class 12th B</span>
+      </div>
+    </div>
+    <div class="performance">
+      <ion-item>
+        <div>
+          <span>Roll Number</span>
+          <span>0175</span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div>
+          <span>Date of Birth</span>
+          <span>10 Oct 1996</span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div>
+          <span>Blood Group</span>
+          <span>B+</span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div>
+          <span>Emergency Contact</span>
+          <span>+91 9812345678</span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div>
+          <span>Position in Class</span>
+          <span>12th</span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div>
+          <span>Father's Name</span>
+          <span>Mr Raj Shaje</span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div>
+          <span>Mother's Name</span>
+          <span>Mrs Priya Shaje</span>
+        </div>
+      </ion-item>
+    </div>
+    <div class="profile-head">
+      <h2>ATTENDANCE</h2>
+    </div>
+    <div class="terms">
+     <div class="term">
+      <div>
+        <h5>Term 1</h5>
+      </div>
+      <div>
+        <span>235/241 Days</span>
+        <span>Total attendance of the student</span>
+      </div>
+     </div>
+     <div class="term">
+      <div>
+        <h5>Term 2</h5>
+      </div>
+      <div>
+        <span>235/241 Days</span>
+        <span>Total attendance of the student</span>
+      </div>
+     </div>
+    </div>
+    <div class="profile-head">
+      <h2>ACADEMIC PERFORMANCE</h2>
+    </div>
+    <div class="result-detail">
+      <div class="result-header">
+       <div>
+         <h5>Term 1</h5>
+       </div>
+      </div>
+      <div class="table">
+        <div class="thead row">
+          <span>Subject</span>
+          <span>Qtr 1</span>
+          <span>Qtr 2</span>
+          <span>Term 1</span>
+        </div>
+        <div class="row">
+          <span class="subject">English</span>
+          <span class="mark">A+/96</span>
+          <span class="mark">A+/96</span>
+          <span class="final-mark">A+96</span>
+        </div>
+        <div class="row">
+          <span class="subject">Hindi</span>
+          <span class="mark">A+/96</span>
+          <span class="mark">A+/96</span>
+          <span class="final-mark">A+96</span>
+        </div>
+        <div class="row">
+          <span class="subject">Mathematics</span>
+          <span class="mark">A+/96</span>
+          <span class="mark">A+/96</span>
+          <span class="final-mark">A+96</span>
+        </div>
+        <div class="row">
+          <span class="subject">Science</span>
+          <span class="mark">A+/96</span>
+          <span class="mark">A+/96</span>
+          <span class="final-mark">A+96</span>
+        </div>
+        <div class="row">
+          <span class="subject">Social Science</span>
+          <span class="mark">A+/96</span>
+          <span class="mark">A+/96</span>
+          <span class="final-mark">A+96</span>
+        </div>
+        <div class="row">
+          <span class="subject">Sanskrit</span>
+          <span class="mark">A+/96</span>
+          <span class="mark">A+/96</span>
+          <span class="final-mark">A+96</span>
+        </div>
+        <div class="row result">
+          <span></span>
+          <span></span>
+          <span>GPA</span>
+          <span>4.21</span>
+        </div>
+      </div>
+     </div>
+     <div class="result-detail">
+        <div class="result-header">
+          <div>
+            <h1>Term 2</h1>
+          </div>
+        </div>
+        <div class="table">
+          <div class="thead row">
+            <span>Subject</span>
+            <span>Qtr 1</span>
+            <span>Qtr 2</span>
+            <span>Term 1</span>
+          </div>
+          <div class="row">
+            <span class="subject">English</span>
+            <span class="mark">A+/96</span>
+            <span class="mark">A+/96</span>
+            <span class="final-mark">A+96</span>
+          </div>
+          <div class="row">
+            <span class="subject">Hindi</span>
+            <span class="mark">A+/96</span>
+            <span class="mark">A+/96</span>
+            <span class="final-mark">A+96</span>
+          </div>
+          <div class="row">
+            <span class="subject">Mathematics</span>
+            <span class="mark">A+/96</span>
+            <span class="mark">A+/96</span>
+            <span class="final-mark">A+96</span>
+          </div>
+          <div class="row">
+            <span class="subject">Science</span>
+            <span class="mark">A+/96</span>
+            <span class="mark">A+/96</span>
+            <span class="final-mark">A+96</span>
+          </div>
+          <div class="row">
+            <span class="subject">Social Science</span>
+            <span class="mark">A+/96</span>
+            <span class="mark">A+/96</span>
+            <span class="final-mark">A+96</span>
+          </div>
+          <div class="row">
+            <span class="subject">Sanskrit</span>
+            <span class="mark">A+/96</span>
+            <span class="mark">A+/96</span>
+            <span class="final-mark">A+96</span>
+          </div>
+          <div class="row result">
+            <span></span>
+            <span></span>
+            <span>GPA</span>
+            <span>4.21</span>
+          </div>
+        </div>
+     </div>
+
+     <div class="result-detail">
+      <div class="result-header">
+        <div>
+          <h1>Final</h1>
+        </div>
+      </div>
+      <div class="table">
+        <div class="thead row">
+          <span>Subject</span>
+          <span>Final</span>
+        </div>
+        <div class="row">
+          <span class="subject">English</span>
+          <span class="final-mark">A+96</span>
+        </div>
+        <div class="row">
+          <span class="subject">Hindi</span>
+          <span class="final-mark">A+96</span>
+        </div>
+        <div class="row">
+          <span class="subject">Mathematics</span>
+          <span class="final-mark">A+96</span>
+        </div>
+        <div class="row">
+          <span class="subject">Science</span>
+          <span class="final-mark">A+96</span>
+        </div>
+        <div class="row">
+          <span class="subject">Social Science</span>
+          <span class="final-mark">A+96</span>
+        </div>
+        <div class="row">
+          <span class="subject">Sanskrit</span>
+          <span class="final-mark">A+96</span>
+        </div>
+        <div class="row result">
+          <span></span>
+          <span></span>
+          <span>GPA</span>
+          <span>4.21</span>
+        </div>
+      </div>
+   </div>
+   <div class="remarks">
+    <div class="head">
+      <p>Remarks by Teacher</p>
+    </div>
+    <div class="content">
+      <p>
+        Thanks for a fantastic year at school
+        this year! It's been awesome to see
+        everyone grow and develop so much and
+        our community has come together so wonderfully
+         with all of our exciting new projects and
+         activities. Hope you all have a fantastic
+         summer - and looking forward to seeing
+         everyone back in the fall.
+      </p>
+    </div>
+    <div class="class-councillor">
+      <p>-Viraj Mehto</p>
+    </div>
+   </div>
+  </div>
 
 </ion-content>

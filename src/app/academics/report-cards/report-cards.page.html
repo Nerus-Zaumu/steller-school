@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>report-cards</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-toolbar [pageTitle]="'Report Cards'"></app-toolbar>
 
 <ion-content>
+
+  <div class="container">
+    <ion-item (click)="viewReportCard('Class 7th(2015-2016)')">
+      <div>
+        <span>Class 7th(2015-2016)</span>
+        <span><ion-icon name="chevron-forward-outline"></ion-icon></span>
+      </div>
+    </ion-item>
+    <ion-item (click)="viewReportCard('Class 8th(2016-2017)')">
+      <div>
+        <span>Class 8th(2016-2017)</span>
+        <span><ion-icon name="chevron-forward-outline"></ion-icon></span>
+      </div>
+    </ion-item>
+    <ion-item (click)="viewReportCard('Class 9th(2017-2018)')">
+      <div>
+        <span>Class 9th(2017-2018)</span>
+        <span><ion-icon name="chevron-forward-outline"></ion-icon></span>
+      </div>
+    </ion-item>
+    <ion-item (click)="viewReportCard('Class 10th(2018-2019)')">
+      <div>
+        <span>Class 10th(2018-2019)</span>
+        <span><ion-icon name="chevron-forward-outline"></ion-icon></span>
+      </div>
+    </ion-item>
+    <ion-item (click)="viewReportCard('Class 11th(2019-2020)')">
+      <div>
+        <span>Class 11th(2019-2020)</span>
+        <span><ion-icon name="chevron-forward-outline"></ion-icon></span>
+      </div>
+    </ion-item>
+  </div>
 
 </ion-content>
